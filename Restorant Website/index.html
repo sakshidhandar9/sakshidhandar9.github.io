@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restorant Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+<script src="script.js"></script> 
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    .hero {
+        background-color: white; 
+        padding: 10px 20px;
+    }
+
+    .hero nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero ul {
+        list-style: none;
+        display: flex;
+        padding: 0;
+        margin: 0;
+    }
+
+    .hero li {
+        margin: 0 10px;
+    }
+
+    .hero a {
+        color: black;
+        text-decoration: none;
+        padding: 14px 20px;
+    }
+
+    .hero a:hover {
+        background-color: #87CEEB;
+    }
+
+    .logo {
+        margin: 0 20px;
+        
+    }
+
+    .logo img {
+        height: 70px;
+        width: 70px;
+        border-top: 5px;
+    }
+
+    .spacer {
+        margin-top: 20px;
+        margin-right: 100px;
+        margin-left: 100px;
+    }
+
+    .text h1 {
+            font-size: 35px;
+            color: black;
+            margin-bottom: 30px;
+            font-weight: bold;
+            font-style: normal;
+            
+        }
+
+        .text p {
+            font-size: 17px;
+            color: black;
+            line-height: 1.5;
+            margin-top: 10; 
+            
+        }
+    
+
+    .img-container img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+    .container .text {
+        width: 500px;
+        padding: 20px;
+        
+    }
+
+    .content {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            
+           
+        }
+
+        .img-container {
+            flex: 1;
+            padding: 20px;
+        }
+        .text {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .row img {
+            display: flex;
+            width: 250px;
+            height: 200px;
+            justify-content: center;
+            gap: 70px;
+            text-align: center;
+            margin-right: 100px;
+            margin-left: 100px;
+            align-items: center;
+            justify-content: center;
+            margin-left: 100px;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            
+        }
+
+
+        .text1 h1{
+            font-size: 35px;
+            color: black;
+            margin-top: 10px;
+            font-weight: bold;
+            font-style: normal;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .container1 .img1-container1 {
+        flex: 1;
+        padding: 20px;
+    }
+
+    .img1-container1 img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .container1 .text1 {
+        flex: 1;
+        padding: 20px;
+        margin-top: 10px;
+    }
+
+    .content1 {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    .spacer1 {
+        margin-top: 40px;
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+
+.container2 {
+    background-color: white;
+    border-radius: 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 1600px;
+    max-height: 1600px;
+    width: 100%;
+    padding: 20px; 
+    display: block; 
+    margin: 20px; 
+    margin-bottom: 100px;   
+
+
+}
+
+.row1 {
+    display: flex;
+    justify-content: space-evenly;/* Align cards with space between */
+    gap: 50px; /* Add space between the cards */
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 20px;
+    align-items: center;
+
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    padding: 40px;
+    width: calc(33.33% - 20px); /* Adjust card width with gap */
+}
+
+.card:hover {
+    transform: translateY(-15px); /* Move card up on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance the shadow on hover */
+}
+
+.card img {
+    width: 300px; /* Set a fixed width for images */
+    height: 500px;
+    border-radius: 8px;
+    height: 100%;
+}
+
+
+.card-title {
+    font-size: 1.5em;
+    margin: 0;
+    margin-bottom: 5px; /* Add space below the title */
+}
+
+.card-text {
+    font-size: 1em;
+    color: #666;
+}
+
+.text5 h4{
+    font-size: 35px;
+            color: black;
+            margin-bottom: 10px;
+            font-weight: bold;
+            font-style: normal;
+            margin-bottom: 30px;
+            text-align: center;
+}
+
+.text p{
+    font-size: 17px;
+            color: black;
+            line-height: 1.5;
+            margin-top: 10; 
+}
+
+.text5 p{
+    font-size: 17px;
+            color: black;
+            line-height: 1.5;
+            margin-top: 10; 
+            text-align: center;
+        }
+
+
+
+    .row2{
+        display: flex;
+    justify-content: space-evenly;/* Align cards with space between */
+    gap: 50px; /* Add space between the cards */
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+    .container4{
+    background-color: white;
+    border-radius: 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 1600px;
+    max-height: 1600px;
+    width: 100%;
+    padding: 20px; 
+    margin-bottom: 100px; 
+    margin-top: 80px;
+    display: block; /* Ensure container is visible by default */
+    margin: 20px; /* Add margin for spacing */
+    
+ }
+
+
+ .container4.hide {
+    display: none;
+
+ }
+
+ .card2 {
+    width: 18rem;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.card2 .card-img-top {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.card2 .card-body {
+    padding: 1.25rem;
+}
+
+.card2 .card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+}
+
+.card2 .card-text {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #555;
+}
+
+    .card2:hover{
+        transform: translateY(-15px); /* Move card up on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance the shadow on hover */
+    } 
+
+    .card2 .btn {
+    background-color: gray;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.card2 .btn:hover {
+    background-color: darkolivegreen;
+    text-decoration: none;
+    color: #fff;
+}
+     
+.hide-button {
+    display: none;
+}
+
+.hide-button1 {
+    display: none;
+}
+
+.text6 h1{
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    text-align: center;
+}
+
+
+.container5 {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin-right: 100px;
+    margin-left: 100px;
+    margin-top: 100px;
+}
+
+.row3 {
+    display: flex;
+    width: 100%;
+}
+
+.video-container {
+    flex: 1;
+    margin-right: 50px;    
+}
+
+.profile-container {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center the profile content */
+    padding: 20px;
+}
+
+.video-container video {
+    width: 800px;
+    height: 600px;
+    height: auto;
+    border-radius: 25px;
+    
+
+        }
+
+        .profile-container h4{
+            font-weight: bold;
+            font-size: 35px;
+            font-family: 'Times New Roman', Times, serif;
+            margin-bottom: 20px;
+        }
+.row4 {
+    display: flex;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 40px;
+
+}
+
+.map-container {
+    margin-top: 50px; /* Adjust spacing above the map */
+    width: 100%; /* Full width of the parent container */
+    height: 450px; /* Adjust height as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+}
+
+
+.map-container iframe {
+    width: 600px; /* Full width of the map container */
+    height: 400px;/* Full height of the map container */
+    border-radius: 20px; /* Remove border */
+    transition: filter 0.3s ease;
+}
+
+.map-container-hover iframe {
+    filter: brightness(80%); /* Darkens the map on hover */
+    color: #007bff;
+    
+}
+
+.contact {
+    flex: 2;
+    padding-left: 100px;
+    margin-top: 80px;
+    
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    width: 600px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.contact h3{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+.footer {
+    background-color: burlywood;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-container > div {
+    flex: 1;
+    margin: 10px;
+}
+
+.footer h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer .social-icons img {
+    width: 30px;
+    margin: 0 5px;
+}
+
+.footer-navigation ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-navigation ul li {
+    margin: 5px 0;
+}
+
+.footer-navigation ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-navigation ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .content,
+    .content1,
+    .about-container {
+        flex-direction: column;
+    }
+
+    .text,
+    .text1,
+    .about-text,
+    .img-container,
+    .img1-container1,
+    .about-image {
+        flex: 1 1 100%;
+    }
+
+     .food .row img {
+        width: calc(50% - 10px);
+    } 
+
+    .container2 .card {
+        flex: 1 1 100%;
+    }
+
+    .about-container {
+        align-items: flex-start;
+    }
+
+    footer .row {
+        flex-direction: column;
+    }
+
+    footer .col-md-3,
+    footer .col-md-6 {
+        max-width: 100%;
+    }
+
+    .form input[type="text"] {
+        width: 60%;
+    }
+}
+
+@media (max-width: 480px) {
+    .food .row img {
+        width: 100%;
+    }
+
+    .form input[type="text"] {
+        width: 80%;
+    }
+
+    .form button[type="submit"] {
+        width: 80%;
+        margin-top: 10px;
+    }
+}
+  
+    
+</style>
+
+</head>
+<body>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<div class="hero">
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Menu</a></li>
+            <li class="logo"><a href="#"><img src="pngtree-restaurant-logo-design-vector-template-png-image_5441058.jpg" alt="Logo"></a></li> <!-- Logo in the middle -->
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</div>
+
+<div class="container spacer">
+   <div class="content"> 
+    
+    <div class="text">
+        <h1>Good food choices are good investments.</h1>
+        <p>Vegetarian food leaves a deep impression on our nature. If the whole world adopts vegetarianism, it can change the destiny of humankind, Good food is good mood, and vegetarian food is the happiest of all.</p>
+    </div>
+
+    <div class="img-container">
+        <img src="pexels-photo-1640774.jpeg" alt="image">
+    </div>
+ </div>  
+</div>
+
+ <!-- <div class="food">
+    <div class="row">
+        <figure>
+        <img src="th (3).jpg" alt="image1">
+        <figcaption>Caption for image 1</figcaption>
+    </figure>
+    <figure>
+        <img src="food-burgers-burger-white-background-wallpaper-preview.jpg" alt="image2">
+        <figcaption>Caption for image 1</figcaption>
+    </figure>
+    <figure>
+        <img src="spaghetti_PNG17.png" alt="image3">
+        <figcaption>Caption for image 1</figcaption>
+    </figure>
+    </div>
+</div>  -->
+
+<!-- <div style="display: flex;">
+    <div class="item">
+        <img src="th (3).jpg" alt="image1">
+        <div class="caption">Caption for image 1</div>
+    </div>
+    <div class="item">
+        <img src="food-burgers-burger-white-background-wallpaper-preview.jpg" alt="image2">
+        <div class="caption">Caption for image 2</div>
+    </div>
+    <div class="item">
+        <img src="spaghetti_PNG17.png" alt="image3">
+        <div class="caption">Caption for image 3</div>
+    </div>
+</div> -->
+
+<div class="row">
+    <img src="th (3).jpg" alt="image1">
+    <img src="food-burgers-burger-white-background-wallpaper-preview.jpg" alt="image2">
+    <img src="spaghetti_PNG17.png" alt="image3">
+</div>
+
+
+<div class="container1 spacer1">
+    <div class="content1">
+        <div class="img1-container1">
+            <img src="thali.jpg" alt="img">
+        </div>
+
+        <div class="text1">
+            <h1>Indian Thali </h1>
+            <p>Delight in the flavors of India with a vegetarian thali—a wholesome meal featuring a variety of delicious,plant-based dishes that
+    offer a rich and satisfying culinary experience. Experience the essence of India with an authentic thali—a vibrant platter of diverse flavors, 
+    textures, and aromas, offering a delightful culinary journey through regional specialties, all in one satisfying meal.Enjoy the true
+    taste of India with a thali—a complete meal with a variety of dishes, each offering a unique flavor, making for a delicious and satisfying experience.</p>
+        </div>
+    </div>
+</div>
+
+
+<div class="container3">
+<div class="text5">
+    <h4>Menu</h4>
+    <p>Indulge in a journey of flavors with our menu, offering a perfect blend of tradition and innovation!</p>
+</div>
+
+
+<button class="hide-button1">Hide Container</button>
+<div class="container2">
+    <div class="row1">
+        <div class="card">
+            <img src="cofy2.jpg" alt="image_1">
+            <div class="card-body">
+                <h5 class="card-title">John Doe</h5>
+                <p class="card-text">Architect & Engineer</p>
+            </div>
+        </div>
+        
+        <div class="card">
+            <img src="cofy1.png" alt="image_2">
+            <div class="card-body">
+                <h5 class="card-title">Black Coffee</h5>
+                <p class="card-text">Lorem ipsum dolor sit.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="cofy3.jpg" alt="image_3">
+            <div class="card-body">
+                <h5 class="card-title">White Coffee</h5>
+                <p class="card-text">Lorem ipsum dolor sit.</p>
+            </div>
+        </div>    
+    </div>
+</div>
+
+<button class="hide-button">Hide Container</button>
+<div class="text6">
+    <h1>Store</h1>
+</div>
+
+<div class="container4">
+<div class="row2">
+<div class="card2">
+    <img src="I1.jpeg" class="card-img-top" alt="img1">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Visit Now</a>
+    </div>
+  </div>
+
+
+  <div class="card2">
+    <img src="I3.jpeg" class="card-img-top" alt="img2">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Visit Now</a>
+    </div>
+  </div>
+
+
+  <div class="card2">
+    <img src="pexels-photo-239975.jpeg" class="card-img-top" alt="img3">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Visit Now</a>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="container5">
+    <div class="row3 d-flex">
+        <div class="video-container">
+            <video width="100%" autoplay muted loop>
+                <source src="video.mp4" type="video/mp4"> <!-- Replace with your video file path -->
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div class="profile-container">
+                    <h4 class="card-title">Company Profile</h4>
+                    <h5 style="font-weight: bold;">Welcome to Delicious Delights</h5>
+                    <h6>Location: 123 Main Street, Cityville, CA</h6>
+                    <p class="card-text">At Delicious Delights, our mission is to create memorable dining experiences by combining innovative flavors with friendly hospitality.
+                         We strive to exceed our guests' expectations with every visit, ensuring they leave satisfied and eager to return.
+                         At Delicious Delights, we prioritize sustainability by sourcing ingredients locally whenever possible and supporting eco-friendly practices.</p>
+                    <div class="social-icons">
+                       <img src="icons8-facebook-circled.gif" alt="Facebook">
+                        <img src="icons8-whatsapp.gif" alt="WhatsApp">
+                        <img src="icons8-instagram.gif" alt="Instagram">
+                        <img src="icons8-twitter.gif" alt="twitter">
+                    </div> 
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row4">
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119270.43489738643!2d77.67934327569932!3d20.904227820691837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd6a4a67774bc15%3A0x3c7b3f78ca4f9635!2sAmravati%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1718451134934!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="contact">
+        <h3>Contact Us</h3>
+        <form>
+            <div class="form-group">
+                <label for="yourName">Your Name</label>
+                <input type="text" id="yourName" name="yourName" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <input type="text" id="gender" name="gender" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" class="form-control"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-about">
+            <h4>About Delicious Delights</h4>
+            <p>Delicious Delights is a gourmet restaurant dedicated to offering the finest dining experience. Our mission is to provide exceptional service and unforgettable flavors.</p>
+        </div>
+        <div class="footer-contact">
+            <h4>Contact Us</h4>
+            <p>Email: info@deliciousdelights.com</p>
+            <p>Phone: (123) 456-7890</p>
+            <p>Address: 123 Main Street, Cityville, CA</p>
+        </div>
+        <div class="footer-social">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+                <a href="https://www.facebook.com"><img src="icons8-facebook-circled.gif" alt="Facebook"></a>
+                <a href="https://www.whatsapp.com"><img src="icons8-whatsapp.gif" alt="WhatsApp"></a>
+                <a href="https://www.instagram.com"><img src="icons8-instagram.gif" alt="Instagram"></a>
+                <a href="https://www.twitter.com"><img src="icons8-twitter.gif" alt="Twitter"></a>
+            </div>
+        </div>
+        <div class="footer-navigation">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+   
+</footer>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+<script>
+    // Ensure the video starts from the beginning every time the page is visited
+    window.addEventListener('load', function() {
+        var video = document.getElementById('companyVideo');
+        video.currentTime = 0;
+        video.play();
+    });
+
+    // Toggle visibility of container2
+    document.querySelector('.hide-button1').addEventListener('click', function() {
+        document.querySelector('.container2').classList.toggle('hide');
+        this.classList.toggle('invisible'); // Toggle 'invisible' class on the button itself
+    });
+
+    // Toggle visibility of container4
+    document.querySelector('.hide-button').addEventListener('click', function() {
+        document.querySelector('.container4').classList.toggle('hide');
+        this.classList.toggle('invisible'); // Toggle 'invisible' class on the button itself
+    });
+
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const map = document.querySelector('.map-container');
+
+        map.addEventListener('mouseover', () => {
+            map.classList.add('map-container-hover');
+        });
+
+        map.addEventListener('mouseout', () => {
+            map.classList.remove('map-container-hover');
+        });
+    });
+</script>
+
+</body>
+</html> 
+                
+        
+        
+
